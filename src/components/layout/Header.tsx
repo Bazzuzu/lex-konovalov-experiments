@@ -37,20 +37,22 @@ function NavLink({ to, children, currentPath }: { to: string; children: React.Re
 }
 
 function Navigation({ currentPath }: { currentPath?: string }) {
+    const base = import.meta.env.BASE_URL;
     return (
         <div className="content-stretch flex gap-space-10 items-center relative shrink-0" data-name="Navigation">
-            <NavLink to="/" currentPath={currentPath}>Home</NavLink>
-            <NavLink to="/about" currentPath={currentPath}>About</NavLink>
+            <NavLink to={`${base}/`} currentPath={currentPath}>Home</NavLink>
+            <NavLink to={`${base}/about`} currentPath={currentPath}>About</NavLink>
             <Icons />
         </div>
     );
 }
 
 export function Header({ currentPath }: { currentPath?: string }) {
+    const base = import.meta.env.BASE_URL;
     return (
         <div className="w-full relative z-10">
             <Container className="flex items-center justify-between py-space-4 md:py-space-10">
-                <a href="/" aria-label="Home">
+                <a href={`${base}/`} aria-label="Home">
                     <Logo className="shrink-0" />
                 </a>
                 <Navigation currentPath={currentPath} />

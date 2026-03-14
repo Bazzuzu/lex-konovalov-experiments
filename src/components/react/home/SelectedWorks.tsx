@@ -4,9 +4,10 @@ import { Container } from "../../layout/Container";
 import svgPaths from "../imports/svg-selected-works";
 
 // Project assets from public/images
-const imgLuxury = "/images/project-luxury.png";
-const imgMobile = "/images/project-mobile.png";
-const imgHomepage = "/images/project-homepage.png";
+const base = import.meta.env.BASE_URL;
+const imgLuxury = `${base}/images/project-luxury.png`;
+const imgMobile = `${base}/images/project-mobile.png`;
+const imgHomepage = `${base}/images/project-homepage.png`;
 
 type ProjectCardProps = {
     imageSrc: string;
@@ -43,7 +44,7 @@ function ProjectCard({ imageSrc, title, description, slug, index }: ProjectCardP
             viewport={{ once: true, margin: "-100px" }}
             className="flex flex-col gap-space-4 relative group cursor-pointer w-full"
         >
-            <a href={`/work/${slug}`} className="contents">
+            <a href={`${import.meta.env.BASE_URL}/work/${slug}`} className="contents">
                 {/* Image Container with inner scale on hover */}
                 <div className="aspect-[4/3] w-full relative overflow-hidden bg-muted rounded-[20px] isolate">
                     {/* Subtle Overlay */}

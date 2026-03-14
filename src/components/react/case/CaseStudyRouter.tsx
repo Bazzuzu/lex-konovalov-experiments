@@ -26,7 +26,7 @@ export default function CaseStudyRouter({ slug }: CaseStudyRouterProps) {
         <div className="bg-page flex flex-col items-center justify-center min-h-screen font-sans">
             <h1 className="text-display-medium">Case Study Not Found</h1>
             <p className="text-body-large mt-space-4">The case study with slug "{slug}" was not found.</p>
-            <a href="/" className="mt-space-8 underline">Back to Home</a>
+            <a href={`${import.meta.env.BASE_URL}/`} className="mt-space-8 underline">Back to Home</a>
         </div>
     );
 }

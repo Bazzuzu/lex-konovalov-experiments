@@ -38,10 +38,10 @@ export function CaseStudyHeader() {
 
             <Container className="py-space-6 md:py-space-10 relative z-10">
                 <div className="flex items-center justify-between w-full" data-name="Header">
-                    <a href="/" className="hover:opacity-80 transition-opacity" aria-label="Back to Home">
+                    <a href={`${import.meta.env.BASE_URL}/`} className="hover:opacity-80 transition-opacity" aria-label="Back to Home">
                         <Back />
                     </a>
-                    <a href="/" className="hover:opacity-80 transition-opacity" aria-label="Home">
+                    <a href={`${import.meta.env.BASE_URL}/`} className="hover:opacity-80 transition-opacity" aria-label="Home">
                         <Logo />
                     </a>
                 </div>

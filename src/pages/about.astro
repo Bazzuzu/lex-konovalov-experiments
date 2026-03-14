@@ -1,0 +1,12 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import AboutPage from "../components/react/about/About";
+---
+
+<MainLayout
+    title="About | Lex Konovalov"
+    description="Product Designer focused on metrics over pixels."
+    hideHeader={true}
+>
+    <AboutPage client:load currentPath={Astro.url.pathname} />
+</MainLayout>

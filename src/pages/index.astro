@@ -1,0 +1,13 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Hero from "../components/react/home/Hero";
+import SelectedWorks from "../components/react/home/SelectedWorks";
+---
+
+<MainLayout title="Lex Konovalov | Product Designer" hideHeader={true}>
+    <!-- React Hero Component (Hydrated) -->
+    <Hero client:load currentPath={Astro.url.pathname} />
+
+    <!-- React SelectedWorks Component (Hydrated for consistent hover effects) -->
+    <SelectedWorks client:load />
+</MainLayout>

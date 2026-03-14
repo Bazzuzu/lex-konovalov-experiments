@@ -1,0 +1,87 @@
+---
+import archivo400 from "@fontsource/archivo/files/archivo-latin-400-normal.woff2?url";
+import archivo700 from "@fontsource/archivo/files/archivo-latin-700-normal.woff2?url";
+import spaceGrotesk400 from "@fontsource/space-grotesk/files/space-grotesk-latin-400-normal.woff2?url";
+import spaceGrotesk700 from "@fontsource/space-grotesk/files/space-grotesk-latin-700-normal.woff2?url";
+import "../styles/globals.css";
+
+import Header from "../components/layout/Header";
+import Footer from "../components/layout/Footer.astro";
+import ScrollToTopFAB from "../components/layout/ScrollToTopFAB";
+import { AnimatedBackground } from "../components/layout/AnimatedBackground";
+
+interface Props {
+    title: string;
+    description?: string;
+    hideHeader?: boolean;
+}
+
+const {
+    title,
+    description = "Design Portfolio",
+    hideHeader = false,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content={description} />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+
+        <!-- Preload critical fonts -->
+        <link
+            rel="preload"
+            href={archivo400}
+            as="font"
+            type="font/woff2"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="preload"
+            href={archivo700}
+            as="font"
+            type="font/woff2"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="preload"
+            href={spaceGrotesk400}
+            as="font"
+            type="font/woff2"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="preload"
+            href={spaceGrotesk700}
+            as="font"
+            type="font/woff2"
+            crossorigin="anonymous"
+        />
+
+        <!-- Critical Font Style to prevent FOUT -->
+        <style is:inline>
+            /* Apply font-family immediately to minimize blink */
+            html,
+            body {
+                font-family: "Space Grotesk", sans-serif !important;
+            }
+        </style>
+    </head>
+    <body
+        class="bg-page text-primary antialiased min-h-screen flex flex-col relative overflow-x-hidden"
+    >
+        <AnimatedBackground client:load />
+        {/* Conditionally render Header */}
+        {!hideHeader && <Header client:load currentPath={Astro.url.pathname} />}
+        <main class="flex-1 relative z-10">
+            <slot />
+        </main>
+        <Footer />
+        <ScrollToTopFAB client:load />
+    </body>
+</html>

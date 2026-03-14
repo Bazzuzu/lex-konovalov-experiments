@@ -1,0 +1,23 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import CaseStudyRouter from "../../components/react/case/CaseStudyRouter";
+
+export async function getStaticPaths() {
+    return [
+        {
+            params: {
+                slug: "mobile-request-page-redesign-for-online-travel-agency",
+            },
+        },
+        { params: { slug: "home-page-redesign-for-online-travel-agency" } },
+        { params: { slug: "building-the-os-for-luxury-travel" } },
+        { params: { slug: "mobile-cro" } },
+    ];
+}
+
+const { slug } = Astro.params;
+---
+
+<MainLayout title="Case Study | Lex Konovalov" hideHeader={true}>
+    <CaseStudyRouter client:load slug={slug as string} />
+</MainLayout>

@@ -1,0 +1,78 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer
+    class="w-full bg-card text-primary py-space-10 md:py-space-16 mt-auto border-t border-subtle"
+>
+    <div class="container flex flex-wrap items-center justify-between gap-6">
+        <!-- Left: Logo & Copyright -->
+        <div class="flex items-center gap-space-6">
+            <a href="/" class="relative shrink-0 size-[48px]" aria-label="Home">
+                <svg
+                    class="block size-full"
+                    fill="none"
+                    viewBox="0 0 48 48"
+                    aria-labelledby="footer-logo-title"
+                >
+                    <title id="footer-logo-title">Lex Konovalov Logo</title>
+                    <path
+                        d="M36 0H12C5.37258 0 0 5.37258 0 12V36C0 42.6274 5.37258 48 12 48H36C42.6274 48 48 42.6274 48 36V12C48 5.37258 42.6274 0 36 0Z"
+                        fill="currentColor"
+                        fill-opacity="0.24"></path>
+                    <path
+                        clip-rule="evenodd"
+                        d="M35.8078 34.8407L34.1992 39.4865L27.511 27L40.9328 30.6403L36.9301 33.3663L41 36.63L39.8777 38.1044L35.8078 34.8407Z"
+                        fill="var(--color-page)"></path>
+                    <path
+                        d="M9 24H24.5882C24.5882 32.8366 17.6091 40 9 40V24Z"
+                        fill="var(--color-page)"></path>
+                    <path
+                        d="M24.5882 24C24.5882 15.1634 17.6091 8 9 8V24H24.5882Z"
+                        fill="var(--color-page)"></path>
+                    <path
+                        d="M40.1764 8C31.5672 8 24.5882 15.1634 24.5882 24H32.3823C36.6868 24 40.1764 20.4183 40.1764 16V8Z"
+                        fill="var(--color-page)"></path>
+                </svg>
+            </a>
+            <p class="text-sm font-normal text-primary">© Lex Konovalov</p>
+        </div>
+
+        <!-- Right: Links -->
+        <div class="flex items-center gap-space-6 text-[16px]">
+            <a
+                href="https://drive.google.com/file/d/1Hrv_KXQMvvL5CNQ79JcvNkAIAgworHlw/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="underline decoration-solid underline-offset-4 hover:opacity-80 transition-opacity text-primary"
+            >
+                CV
+            </a>
+            <span class="text-secondary">/</span>
+
+            <a
+                href="mailto:lex.konovalov@gmail.com"
+                class="hidden md:block underline decoration-solid underline-offset-4 hover:opacity-80 transition-opacity text-primary"
+            >
+                lex.konovalov@gmail.com
+            </a>
+            <a
+                href="mailto:lex.konovalov@gmail.com"
+                class="md:hidden underline decoration-solid underline-offset-4 hover:opacity-80 transition-opacity text-primary"
+            >
+                Email
+            </a>
+
+            <span class="text-secondary">/</span>
+
+            <a
+                href="https://www.linkedin.com/in/ok-design/"
+                target="_blank"
+                rel="noreferrer"
+                class="underline decoration-solid underline-offset-4 hover:opacity-80 transition-opacity text-primary"
+            >
+                Linkedin
+            </a>
+        </div>
+    </div>
+</footer>

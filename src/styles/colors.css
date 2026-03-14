@@ -1,0 +1,54 @@
+/* Color Tokens and Theme Definitions */
+
+:root {
+    /* Premium Light Mode Palette */
+    --background: #F8FAFC;
+    --foreground: #1E293B;
+    --card: #FFFFFF;
+    --muted: #F1F5F9;
+    --muted-foreground: #64748B;
+    --border: #E2E8F0;
+    --ring: #2563EB;
+    --accent: #2563EB;
+
+    /* Elevation / Surfaces */
+    --surface-1: #FFFFFF;
+    --surface-2: #F8FAFC;
+    --surface-3: #F1F5F9;
+}
+
+.dark {
+    /* Premium Dark Mode Palette */
+    --background: #0A0A0A;
+    --foreground: #F8FAFC;
+    --card: #141414;
+    --muted: #1F1F1F;
+    --muted-foreground: #A1A1AA;
+    --border: #27272A;
+    --ring: #F8FAFC;
+    --accent: #FFFFFF;
+
+    /* Elevation / Surfaces */
+    --surface-1: #0A0A0A;
+    --surface-2: #141414;
+    --surface-3: #1F1F1F;
+}
+
+@theme {
+    /* Bind CSS Variables to Tailwind Theme */
+    --color-page: var(--background);
+    --color-card: var(--card);
+    --color-surface-hover: var(--muted);
+
+    --color-primary: var(--foreground);
+    --color-secondary: var(--muted-foreground);
+    --color-accent: var(--accent);
+
+    --color-subtle: var(--border);
+    --color-focus: var(--ring);
+
+    /* Gradients - Consistent across modes */
+    --color-gradient-teal: #6CDAC4;
+    --color-gradient-purple: #7E52F4;
+    --color-gradient-pink: #ED5A7C;
+}

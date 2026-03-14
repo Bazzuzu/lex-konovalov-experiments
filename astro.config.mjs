@@ -8,8 +8,8 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://alexkonovalov.github.io', // Placeholder - update with your username
-  base: '/lex-konovalov-experiments', // Placeholder - update with your repo name if needed
+  site: 'https://Bazzuzu.github.io', 
+  base: '/lex-konovalov-experiments', 
 
   vite: {
     plugins: [tailwindcss()]

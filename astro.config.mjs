@@ -8,7 +8,8 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://alexkonovalov.com', // Replace with your actual domain
+  site: 'https://alexkonovalov.github.io', // Placeholder - update with your username
+  base: '/lex-konovalov-experiments', // Placeholder - update with your repo name if needed
 
   vite: {
     plugins: [tailwindcss()]
